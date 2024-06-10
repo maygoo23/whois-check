@@ -1,4 +1,4 @@
-# WHOIS Checker
+# WHOIS Check
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/maygoo23/whois-check/docker-publish.yml?branch=main)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/maygoo23/whois-check)
