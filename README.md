@@ -51,13 +51,19 @@ Set the following environment variables before running the tool:
 - `DOMAIN`: Specify the domain you want to monitor.
 - `WEBHOOK_URL`: Provide the Discord webhook URL for receiving alerts.
 
-### Running with Docker
+### Running with Docker-Compose
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-
+```
+    whois-checker:
+      image: ghcr.io/maygoo23/maygoo23/whois-check:latest
+      container_name: whois-check
+      environment:
+        - DOMAIN=${DOMAIN}
+        - WEBHOOK_URL=${WEBHOOK_URL}
+      restart: unless-stopped
+```
 
 
 
