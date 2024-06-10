@@ -1,8 +1,8 @@
 # WHOIS Checker
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/YOUR_USERNAME/YOUR_REPOSITORY/CI)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/YOUR_USERNAME/YOUR_REPOSITORY)
-![GitHub](https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPOSITORY)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maygoo23/whois-check/CI)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/maygoo23/whois-check)
+![GitHub](https://img.shields.io/github/license/maygoo23/whois-check)
 
 A Dockerized WHOIS checker tool that monitors the expiration date of a specified domain and alerts via Discord when it's within a configurable threshold of expiration.
 
