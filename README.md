@@ -1,6 +1,6 @@
 # WHOIS Checker
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maygoo23/whois-check/CI)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/maygoo23/whois-check/Build%20and%20Push%20Docker%20image)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/maygoo23/whois-check)
 ![GitHub](https://img.shields.io/github/license/maygoo23/whois-check)
 
