@@ -11,4 +11,4 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run whois_check.py when the container launches
-CMD ["python", "whois_check.py"]
+CMD ["python", "whois-check.py"]
