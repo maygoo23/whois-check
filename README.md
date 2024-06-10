@@ -53,19 +53,16 @@ Set the following environment variables before running the tool:
 
 ### Running with Docker-Compose
 
-1. Clone the repository:
-
+```yaml
+services:
+  whois-check:
+    image: ghcr.io/maygoo23/maygoo23/whois-check:latest
+    container_name: whois-check
+    environment:
+      - DOMAIN=${DOMAIN}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+    restart: unless-stopped
 ```
-    whois-checker:
-      image: ghcr.io/maygoo23/maygoo23/whois-check:latest
-      container_name: whois-check
-      environment:
-        - DOMAIN=${DOMAIN}
-        - WEBHOOK_URL=${WEBHOOK_URL}
-      restart: unless-stopped
-```
-
-
 
 ---
 
