@@ -29,8 +29,7 @@ def check_domain():
                 if expiry_date < now:
                     send_alert(f"Domain {DOMAIN} has expired!")
                 else:
-                    print(f"Domain {DOMAIN} is not expired. Expiry date: {
-                          expiry_date}")
+                    print(f"Domain {DOMAIN} is not expired. Expiry date: {expiry_date}")
             else:
                 print(f"Could not find expiry date for domain {DOMAIN}")
 
