@@ -27,11 +27,14 @@ def check_domain():
             if expiry_date:
                 now = datetime.now()
                 if expiry_date < now:
-                    send_alert(f"Domain {DOMAIN} has expired!")
+                    verdict = f"Domain {DOMAIN} has expired!"
                 else:
-                    print(f"Domain {DOMAIN} is not expired. Expiry date: {expiry_date}")
+                    verdict = f"Domain {DOMAIN} is not expired. Expiry date: {expiry_date}"
             else:
-                print(f"Could not find expiry date for domain {DOMAIN}")
+                verdict = f"Could not find expiry date for domain {DOMAIN}"
+
+            # Send verdict to Discord
+            send_alert(verdict)
 
         except Exception as e:
             print(f"Error checking domain {DOMAIN}: {e}")
