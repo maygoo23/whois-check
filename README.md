@@ -56,7 +56,7 @@ Set the following environment variables before running the tool:
 ```yaml
 services:
   whois-check:
-    image: ghcr.io/maygoo23/maygoo23/whois-check:latest
+    image: ghcr.io/maygoo23/whois-check:latest
     container_name: whois-check
     environment:
       - DOMAIN=${DOMAIN}
