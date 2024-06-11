@@ -1,4 +1,4 @@
-# WHOIS Check
+# WHOIS Domain Expiry Checker
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/maygoo23/whois-check/docker-publish.yml?branch=main)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/maygoo23/whois-check)
@@ -6,18 +6,15 @@
 ![GitHub Commits](https://img.shields.io/github/commit-activity/t/maygoo23/whois-check)
 ![GitHub Downloads](https://img.shields.io/github/downloads/maygoo23/whois-check/total)
 
-A Dockerized WHOIS checker tool that monitors the expiration date of a specified domain and alerts via Discord when it's within a configurable threshold of expiration.
+This project is a simple WHOIS domain expiry checker. It periodically checks the expiry date of a specified domain and sends alerts via a Discord webhook if the expiration date changes or is nearing.
 
 ---
 
 ## Table of Contents
 
 - [About](#about)
-- [Features](#features)
+- [How It Works](#how-it-works)
 - [Usage](#usage)
-  - [Prerequisites](#prerequisites)
-  - [Configuration](#configuration)
-  - [Running with Docker](#running-with-docker)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -29,11 +26,11 @@ This tool is designed to help users monitor the expiration date of a domain and 
 
 ---
 
-## Features
+## How It Works
 
-- **Automated Monitoring**: Automatically checks the expiration date of the specified domain at regular intervals.
-- **Alert Notifications**: Sends alerts via Discord webhook when the domain is within a configurable threshold of expiration.
-- **Flexible Configuration**: Easily configurable via environment variables for domain and Discord webhook URL.
+- The script retrieves the WHOIS information for the specified domain.
+- It checks if the expiration date of the domain has changed or is within 7 days of expiration.
+- If either condition is met, an alert is sent to the specified Discord webhook.
 
 ---
 
@@ -48,7 +45,7 @@ Before running the WHOIS checker tool, ensure you have the following prerequisit
 
 ### Configuration
 
-Set the following environment variables before running the tool:
+Set the following environment variables in the `docker-compose.yml` file or the `.env` file before starting the container:
 
 - `DOMAIN`: Specify the domain you want to monitor.
 - `WEBHOOK_URL`: Provide the Discord webhook URL for receiving alerts.
