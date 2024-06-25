@@ -61,7 +61,9 @@ def send_alert(message):
 
 if __name__ == "__main__":
     # Announce that the script is starting up
-    send_alert(f"Starting up WHOIS checker for domain {DOMAIN}")
+    startup_message = f"Starting up WHOIS checker for domain {DOMAIN}"
+    log_message(startup_message)
+    send_alert(startup_message)
 
     # Perform an initial WHOIS check
     check_domain()
